@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "3b8f3ec6-b5e3-4946-a620-090ff02fd3c4",
+		"name": "back1_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41326976"
+	},
+	"item": [
+		{
+			"name": "linux",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e250cb917dea49e4a5a89835b6518f0f"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=linux",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "linux"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Разработка",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e250cb917dea49e4a5a89835b6518f0f"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=Разработка&language=ru&from=2025-01-06",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Разработка"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "from",
+							"value": "2025-01-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linux 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e250cb917dea49e4a5a89835b6518f0f"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=linux&language=ru&page =3&pageSize=10",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "linux"
+						},
+						{
+							"key": "language",
+							"value": "ru"
+						},
+						{
+							"key": "page ",
+							"value": "3"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Наука",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e250cb917dea49e4a5a89835b6518f0f"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/top-headlines?country=ru&category=Наука",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"top-headlines"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "ru"
+						},
+						{
+							"key": "category",
+							"value": "Наука"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tools",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "e250cb917dea49e4a5a89835b6518f0f"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ekaterinburg.hh.ru/tracking/view_contacts?vacancy_id=106899397&employer_id=2126550&place=vacancy_bottom_button",
+					"protocol": "https",
+					"host": [
+						"ekaterinburg",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"tracking",
+						"view_contacts"
+					],
+					"query": [
+						{
+							"key": "vacancy_id",
+							"value": "106899397"
+						},
+						{
+							"key": "employer_id",
+							"value": "2126550"
+						},
+						{
+							"key": "place",
+							"value": "vacancy_bottom_button"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

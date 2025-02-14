@@ -1,0 +1,43 @@
+stages:
+  - build
+  - style
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - bash src/build.sh
+  artifacts:
+    paths:
+      - src/cat
+      - src/grep
+    expire_in: 30 days
+  after_script:
+    - bash src/bot.sh
+
+style:
+  stage: style
+  script:
+    - clang-format -n -Werror -style=Google src/cat/s21_cat.c src/grep/s21_grep.c
+  after_script:
+    - bash src/bot.sh
+
+test:
+  stage: test
+  script:
+    - cd src/cat
+    - bash cat_test.sh
+    - cd ../grep
+    - bash grep_test.sh
+  after_script:
+    - bash src/bot.sh
+
+deploy:
+  stage: deploy
+  script:
+    - chmod ugo+rwx src/deploy.sh
+    - bash src/deploy.sh
+  when: manual
+  after_script:
+    - bash src/bot.sh
